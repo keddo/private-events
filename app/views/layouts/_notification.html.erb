@@ -1,0 +1,12 @@
+<% flash.each do |name, msg| %>
+    <% if flash[:success] %>
+        <div class="notification is-primary global-notification">
+        <p class="notice"><%= msg %></p>
+        </div>
+    <% end %>
+    <% if flash[:danger] %>
+        <div class="notification is-danger global-notification">
+        <p class="alert"><%= msg %></p>
+        </div>
+    <% end %>
+<% end %>
