@@ -3,8 +3,19 @@ class EventsController < ApplicationController
     def index
     end
     def new
+      @event = Event.new
     end
     def create
+        users = User.all.count
+        event_creator = rand(1..users)
+       @event = Event.new(event_params)
+       @event.creator_id = event_creator
+       if @event.save
+          flash[:success] = "Event created successfully"
+          redirect_to events_path
+       else
+          render :new
+       end
     end
     def show
     end
@@ -17,7 +28,7 @@ class EventsController < ApplicationController
 
     private
     def event_params
-        params.require(:user).permit(:eventdate, :eventdescription, :eventlocation, :eventname, :creator_id)
+        params.require(:event).permit(:eventdate, :eventdescription, :eventlocation, :eventname, :creator_id)
     end
 
     def set_event
