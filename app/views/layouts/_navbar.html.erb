@@ -1,0 +1,70 @@
+<nav class="navbar is-success">
+  <div class="navbar-brand">
+    <%= link_to root_path, class: 'navbar-item' do %>
+      <span class="icon has-text-danger">
+      <i class="far fa-calendar-alt fa-2x"></i>
+      </span>
+    <% end %>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+        <%= link_to "Create Event", new_event_path, class: "navbar-item"%> | 
+        <%= link_to "Events", events_path, class: "navbar-item"%>
+        </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+        <% if !user_signed_in? %>
+          <p class="control">
+            <%= link_to new_event_path, class: "button is-link is-inverted has-text-grey-darker" do %>
+              <span class="icon has-text-danger">
+                <i class="far fa-calendar-alt"></i>
+              </span>
+            <span>
+              Event
+            </span>
+            <% end %>
+          </p>
+          <p class="control">
+            <%= link_to new_user_session_path, class: 'button is-danger is-outlined has-text-grey-darker' do %>
+              <span class="icon has-text-grey-darker">
+              <i class="fas fa-sign-in-alt"></i>
+              </span>
+              <span>Sign In</span>
+            <% end %>
+          </p>
+          <p class="control">
+            <%= link_to new_user_registration_path, class: 'button is-danger is-outlined has-text-grey-darker' do %>
+              <span class="icon">
+              <i class="fas fa-user-plus"></i>
+              </span>
+              <span>Sign Up</span>
+            <% end %>
+          </p>
+          <% else %>
+          <p class="control">
+            <%= link_to edit_user_registration_path, class: 'has-text-grey-darker' do%>
+              <i class="fas fa-user"></i>
+              <span><%= current_user.name %></span>
+            <% end %>
+          </p>
+          <p class="control">
+            <%= link_to destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to logout?"}, class: 'has-text-grey-darker' do %>
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            <% end %>
+          </p>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
