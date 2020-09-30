@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
     before_action :set_event, except: %i[index new create]
     def index
+        @events = Event.all.order('created_at DESC')
+        @popular_events = Event.first(2)
     end
     def new
       @event = Event.new

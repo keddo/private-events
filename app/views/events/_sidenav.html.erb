@@ -1,0 +1,41 @@
+<div class="column is-one-quarter">
+    <nav class="panel">
+      <p class="panel-heading">Find</p>
+        <%= link_to events_path, class: 'panel-block' do %>
+          <span class="icon has-text-danger"> 
+          <i class="fas fa-home"></i>
+          </span>
+          &nbsp; Home
+        <% end %>
+        <%= link_to events_path, class: 'panel-block' do %>
+          <span class="icon has-text-danger"> 
+          <i class="fas fa-search"></i>
+          </span>
+          &nbsp; Explore
+        <% end %>
+        <%= link_to events_path, class: 'panel-block' do %>
+          <span class="icon has-text-danger"> 
+          <i class="far fa-bell"></i>
+          </span>
+          &nbsp; notifications
+        <% end %>
+        <%= link_to events_path, class: 'panel-block' do %>
+          <span class="icon has-text-danger"> 
+          <i class="far fa-envelope"></i>
+          </span>
+          &nbsp; Messages
+        <% end %>
+        <%= link_to events_path, class: 'panel-block' do %>
+          <span class="icon has-text-danger"> 
+          <i class="far fa-bookmark"></i>
+          </span>
+          &nbsp; Bookmarks
+        <% end %>
+        <%= link_to events_path, class: 'panel-block' do %>
+          <span class="icon has-text-danger"> 
+          <i class="fas fa-list"></i>
+          </span>
+          &nbsp; Lists
+        <% end %>
+    </nav>
+</div>

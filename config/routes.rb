@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   delete 'login', to: 'sessions#destroy'
 
   resources :events
+  root 'events#index'
 end
