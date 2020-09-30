@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     def create
         users = User.all.count
         event_creator = rand(1..users)
-       @event = Event.new(event_params)
+       @event = current_user.events.build(event_params)  # Event.new(event_params)
        @event.creator_id = event_creator
        if @event.save
           flash[:success] = "Event created successfully"
