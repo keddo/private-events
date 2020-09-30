@@ -20,6 +20,7 @@ class EventsController < ApplicationController
        end
     end
     def show
+        
     end
     def edit
     end
@@ -34,6 +35,6 @@ class EventsController < ApplicationController
     end
 
     def set_event
-        @event = Evnet.find(params[:id])
+        @event = Event.find(params[:id])
     end
 end
