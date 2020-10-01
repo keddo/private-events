@@ -21,16 +21,6 @@
         <div class="field is-grouped">
         <% if !user_signed_in? %>
           <p class="control">
-            <%= link_to new_event_path, class: "button is-link is-inverted has-text-grey-darker" do %>
-              <span class="icon has-text-danger">
-                <i class="far fa-calendar-alt"></i>
-              </span>
-            <span>
-              Event
-            </span>
-            <% end %>
-          </p>
-          <p class="control">
             <%= link_to new_user_session_path, class: 'button is-danger is-outlined has-text-grey-darker' do %>
               <span class="icon has-text-grey-darker">
               <i class="fas fa-sign-in-alt"></i>
@@ -49,8 +39,10 @@
           <% else %>
           <p class="control">
             <%= link_to edit_user_registration_path, class: 'has-text-grey-darker' do%>
-              <i class="fas fa-user"></i>
-              <span><%= current_user.name %></span>
+              <figure class="image is-32x32" style="margin-right: 8px;">
+              <%= gravatar_image_tag(current_user.email, alt: current_user.name) %>
+              </figure>
+            Profile
             <% end %>
           </p>
           <p class="control">
