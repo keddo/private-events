@@ -1,41 +1,35 @@
-<div class="column is-one-quarter">
-    <nav class="panel">
-      <p class="panel-heading">Find</p>
-        <%= link_to events_path, class: 'panel-block' do %>
-          <span class="icon has-text-danger"> 
-          <i class="fas fa-home"></i>
-          </span>
-          &nbsp; Home
-        <% end %>
-        <%= link_to events_path, class: 'panel-block' do %>
-          <span class="icon has-text-danger"> 
-          <i class="fas fa-search"></i>
-          </span>
-          &nbsp; Explore
-        <% end %>
-        <%= link_to events_path, class: 'panel-block' do %>
-          <span class="icon has-text-danger"> 
-          <i class="far fa-bell"></i>
-          </span>
-          &nbsp; notifications
-        <% end %>
-        <%= link_to events_path, class: 'panel-block' do %>
-          <span class="icon has-text-danger"> 
-          <i class="far fa-envelope"></i>
-          </span>
-          &nbsp; Messages
-        <% end %>
-        <%= link_to events_path, class: 'panel-block' do %>
-          <span class="icon has-text-danger"> 
-          <i class="far fa-bookmark"></i>
-          </span>
-          &nbsp; Bookmarks
-        <% end %>
-        <%= link_to events_path, class: 'panel-block' do %>
-          <span class="icon has-text-danger"> 
-          <i class="fas fa-list"></i>
-          </span>
-          &nbsp; Lists
-        <% end %>
-    </nav>
-</div>
+
+<aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li><a>Events</a></li>
+  </ul>
+  <p class="menu-label">
+    Admin
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a class="is-active">Manage Your Team</a>
+      <ul>
+        <li><a>Members</a></li>
+        <li><a>Plugins</a></li>
+        <li><a>Add a member</a></li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside>
