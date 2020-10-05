@@ -8,12 +8,9 @@ class EventsController < ApplicationController
       @event = Event.new
     end
     def create
-        users = User.all.count
-        event_creator = rand(1..users)
        @event = current_user.events.build(event_params)  # Event.new(event_params)
-       @event.creator_id = event_creator
        if @event.save
-          flash[:notice] = "Event created successfully"
+          flash[:notice] = 'Event created successfully'
           redirect_to events_path
        else
           render :new

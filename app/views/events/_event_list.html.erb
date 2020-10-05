@@ -21,12 +21,14 @@
                <%= event.creator.name %>
              </p>
           </div>
+          <% if user_signed_in? && current_user == event.creator %>
           <nav class="level">
            <div class="level-left is-mobile">
            <%= link_to event, class: 'button is-outlined' do %>
                <span class="icon has-text-info"> 
                <i class="fas fa-eye"></i>
                </span>
+              <% end %>
            <%= link_to edit_event_path(event), class: 'button is-outlined mx-2' do %>
                <span class="icon has-text-success"> 
                <i class="fas fa-pencil-alt"></i>
