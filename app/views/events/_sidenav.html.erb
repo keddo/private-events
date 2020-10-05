@@ -13,13 +13,33 @@
     Admin
   </p>
   <ul class="menu-list">
-    <li><a>Team Settings</a></li>
     <li>
-      <a class="is-active">Manage Your Team</a>
+      <a class="is-active">Manage Your Events</a>
       <ul>
-        <li><a>Members</a></li>
-        <li><a>Plugins</a></li>
-        <li><a>Add a member</a></li>
+        <li>
+        <%= link_to users_path do %>
+          <span class="icon has-text-info"> 
+           <i class="far fa-list-alt"></i>
+          </span>
+          <span>My Events</span>
+        <% end %>
+        </li>
+        <li>
+        <%= link_to users_path do %>
+          <span class="icon has-text-info"> 
+           <i class="far fa-list-alt"></i>
+          </span>
+          <span>Events Attended</span>
+         <% end %>
+         </li>
+         <li>
+        <%= link_to new_event_path do %>
+          <span class="icon has-text-info"> 
+          <i class="fas fa-plus-circle"></i>
+          </span>
+          <span>Create Event</span>
+         <% end %>
+        </li>
       </ul>
     </li>
     <li><a>Invitations</a></li>
