@@ -5,9 +5,12 @@ class Event < ApplicationRecord
     validates :eventlocation, presence: true
     validates :creator_id, presence: true
 
-    
     has_many :invitations, foreign_key: :attended_event_id
     has_many :attendees, through: :invitations, source: :attendee
     belongs_to :creator, class_name: "User"
 
+    current_time = Time.now
+
+    scope :comming_events, -> { where("eventdate > ?", current_time) }
+    scope :prev_events, -> { where("eventdate < ?", current_time) }
 end
