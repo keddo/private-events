@@ -5,7 +5,7 @@ require 'spec_helper'
 RSpec.describe User, type: :model do
   context 'validation tests' do
     it 'Should be valid if the attributes are' do
-      expect(User.new(name: 'ThisIsName', email: 'blablabla@gmail.com')).to be_valid
+      expect(User.new(name: 'ThisIsName', username: 'Testtttt', email: 'blablabla@gmail.com', password: '123456', password_confirmation: '123456')).to be_valid
     end
 
     it 'Shouldn´t save if the name is less than 5 or more than 25 characters' do
