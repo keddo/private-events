@@ -3,11 +3,11 @@ require 'capybara/rspec'
 require 'spec_helper'
 
 RSpec.describe Event, type: :model do
-  context 'Association tests' do 
-    it { should belong_to(:creator) } 
-    it { should have_many(:invitations) } 
-    it { should have_many(:attendees) } 
-  end 
+  context 'Association tests' do
+    it { should belong_to(:creator) }
+    it { should have_many(:invitations) }
+    it { should have_many(:attendees) }
+  end
 
   context 'validation tests' do
     # it 'Event creation should be valid' do
@@ -33,6 +33,5 @@ RSpec.describe Event, type: :model do
       event = Event.new(eventname: 'ThisIsName', eventlocation: '', eventdate: '', eventdescription: 'This is event descripiton for event date hthehejhlkjljlajdfkj', creator_id: 2)
       expect(event.save).to eq(false)
     end
-
   end
 end

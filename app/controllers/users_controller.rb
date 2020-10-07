@@ -4,10 +4,9 @@ class UsersController < ApplicationController
   end
 
   def show
-   @user = User.find(params[:id])
+    @user = User.find(params[:id])
 
-   @prev_events = @user.attended_events.prev_events
-   @comming_events = @user.attended_events.comming_events
+    @prev_events = @user.attended_events.prev_events
+    @comming_events = @user.attended_events.comming_events
   end
-
 end

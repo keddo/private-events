@@ -27,6 +27,5 @@ RSpec.describe User, type: :model do
       user = User.new(name: 'Helo', username: 'Test', email: 'helloworldgmail', password: '1234', password_confirmation: '1234')
       expect(user.save).to eq(false)
     end
-
   end
 end
