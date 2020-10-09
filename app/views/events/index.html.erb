@@ -1,0 +1,12 @@
+
+<section class="section">
+<div class="container">
+  <div class="columns">
+  <% if user_signed_in? %>
+    <%= render 'sidenav' %>
+  <% end %>
+   <%= render 'event_list' %>
+   <%= render 'related_events' %>
+  </div>
+</div>
+</section>

@@ -1,0 +1,57 @@
+
+<aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li>
+    <%= link_to "Users", users_path %>
+    </li>
+  </ul>
+  <p class="menu-label">
+    Admin
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a class="is-active">Manage Your Events</a>
+      <ul>
+        <li>
+        <%= link_to users_path do %>
+          <span class="icon has-text-info"> 
+           <i class="far fa-list-alt"></i>
+          </span>
+          <span>My Events</span>
+        <% end %>
+        </li>
+        <li>
+        <%= link_to users_path do %>
+          <span class="icon has-text-info"> 
+           <i class="far fa-list-alt"></i>
+          </span>
+          <span>Events Attended</span>
+         <% end %>
+         </li>
+         <li>
+        <%= link_to new_event_path do %>
+          <span class="icon has-text-info"> 
+          <i class="fas fa-plus-circle"></i>
+          </span>
+          <span>Create Event</span>
+         <% end %>
+        </li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside>
