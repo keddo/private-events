@@ -4,7 +4,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order('created_at DESC')
-    @popular_events = Event.first(2)
+    @prev_events = @events.prev_events
+    @comming_events = @events.comming_events
+    @popular_events = Event.first(3)
   end
 
   def new
