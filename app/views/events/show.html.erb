@@ -40,8 +40,8 @@
 <section id="twitter-feed" class="section has-white-mustard-gradient">
  <div class="container">
     <div class="columns">
+      <div class="column">
             <% @event.attendees.each do |attendee| %>
-                    <div class="column">
                         <div class="box">
                             <article class="media">
                                 <div class="media-left">
@@ -79,8 +79,8 @@
                                 </div>
                             </article>
                         </div>
-                    </div>
             <% end %>
+            </div>
         </div>
     </div>
 </section>
